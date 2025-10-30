@@ -32,3 +32,5 @@ admin.site.register(Location)
 admin.site.register(Title)
 
 admin.site.register(Date)
+
+

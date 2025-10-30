@@ -3,6 +3,7 @@ from .models import Participant, Booking
 
 # Register your models here.
 
+
 class BookingAdmin(admin.ModelAdmin):
     list_filter = ["confirmed"]
     readonly_fields = ["event"]
@@ -15,3 +16,4 @@ class ParticipantAdmin(admin.ModelAdmin):
 admin.site.register(Booking, BookingAdmin)
 
 admin.site.register(Participant, ParticipantAdmin)
+
