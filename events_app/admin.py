@@ -3,7 +3,6 @@ from .models import EventCategory, Event, Location, Title, Date
 
 # Register your models here.
 
-
 class EventAdmin(admin.ModelAdmin):
     list_display = ["title", "category", "location", "date"]
     search_fields = ["title", "date"]
@@ -11,7 +10,6 @@ class EventAdmin(admin.ModelAdmin):
     date_hierarchy = "date"
     verbose_name = "Liveact"
     
-
     fieldsets = (
         ("Allgemein", {
             "fields": ("title", "category", "date"),
@@ -32,5 +30,6 @@ admin.site.register(Location)
 admin.site.register(Title)
 
 admin.site.register(Date)
+
 
 

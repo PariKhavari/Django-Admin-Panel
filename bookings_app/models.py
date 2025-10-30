@@ -24,3 +24,4 @@ class Booking(models.Model):
         return f"{self.participant} → {self.event.title}"
 
 
+
