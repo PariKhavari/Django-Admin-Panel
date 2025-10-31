@@ -3,6 +3,7 @@ from .models import EventCategory, Event, Location, Title, Date
 
 # Register your models here.
 
+
 class EventAdmin(admin.ModelAdmin):
     list_display = ["title", "category", "location", "date"]
     search_fields = ["title", "date"]
@@ -16,13 +17,13 @@ class EventAdmin(admin.ModelAdmin):
         }),
         ("Organisation", {
             "classes": ("collapse",),
-            "fields": ("location", "capacity", "slug"),
+            "fields": ("location", "capacity"),
         }),
     )
 
+
 class EventCategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ["name"]}
-
 
 
 admin.site.register(Event, EventAdmin)
