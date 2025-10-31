@@ -15,13 +15,16 @@ class Participant(models.Model):
 
 
 class Booking(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event,on_delete=models.CASCADE)
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     booking_date = models.DateField(auto_now_add=True)
     confirmed = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.participant} → {self.event.title}"
+    
+
+
 
 
 

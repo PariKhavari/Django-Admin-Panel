@@ -9,27 +9,24 @@ class EventAdmin(admin.ModelAdmin):
     list_filter = ["category"]
     date_hierarchy = "date"
     verbose_name = "Liveact"
-    
+
     fieldsets = (
         ("Allgemein", {
             "fields": ("title", "category", "date"),
         }),
         ("Organisation", {
             "classes": ("collapse",),
-            "fields": ("location", "capacity"),
+            "fields": ("location", "capacity", "slug"),
         }),
     )
-    
+
+class EventCategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ["name"]}
+
+
 
 admin.site.register(Event, EventAdmin)
 
-admin.site.register(EventCategory)
+admin.site.register(EventCategory, EventCategoryAdmin)
 
 admin.site.register(Location)
-
-admin.site.register(Title)
-
-admin.site.register(Date)
-
-
-

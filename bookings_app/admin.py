@@ -5,7 +5,7 @@ from .models import Participant, Booking
 
 class BookingAdmin(admin.ModelAdmin):
     list_filter = ["confirmed"]
-    readonly_fields = ["event"]
+    readonly_fields = ["booking_date"]
 
 
 class ParticipantAdmin(admin.ModelAdmin):
