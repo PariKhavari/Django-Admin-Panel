@@ -12,6 +12,7 @@ class ParticipantAdmin(admin.ModelAdmin):
     prepopulated_fields = {"full_name": ("first_name", "last_name")}
 
 
+
 admin.site.register(Booking, BookingAdmin)
 
 admin.site.register(Participant, ParticipantAdmin)

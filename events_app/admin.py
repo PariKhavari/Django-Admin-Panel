@@ -31,3 +31,4 @@ admin.site.register(Event, EventAdmin)
 admin.site.register(EventCategory, EventCategoryAdmin)
 
 admin.site.register(Location)
+
